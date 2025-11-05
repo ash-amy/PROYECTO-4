@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+}
+
+.banner {
+  background-color: gold;
+  color: black;
+  padding: 50px;
+  text-align: center;
+  margin: 0;
+  display: block;
+}
+
+.banner h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 50px;
+  margin: 0;
+}
+
+.banner p {
+  font-size: 25px;
+  margin: 20px;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.banner button {
+  background-color: #ba48da;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.banner button:hover {
+  background-color: #a036c1;
+  transform: scale(1.05);
+  color: white;
+  background-color: #a036c1;
+  border: #a036c1 2px solid;
+  transition: all 0.3s ease;
+  animation: move 15s timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes salto {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.banner button {
+  animation: salto 1s ease-in-out infinite;
+}
+
+.introduccion {
+  background-color: #fff0f0;
+  padding: 10px 20px;
+  display: flex;
+  grid-column: auto;
+}
+
+.bienvenida {
+  width: 60%;
+  border: 3px solid #ff6f61;
+  background-color: #f7a29b;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px auto;
+  box-shadow: 9px 8px 21px 2px rgba(255, 111, 97, 0.32);
+  -webkit-box-shadow: 9px 8px 21px 2px rgba(255, 111, 97, 0.32);
+  -moz-box-shadow: 9px 8px 21px 2px rgba(255, 111, 97, 0.32);
+}
+
+.bienvenida h3 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.bienvenida p {
+  font-size: 20px;
+  text-align: left;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.niños-programación {
+  width: 40%;
+  height: auto;
+  border-radius: 40px;
+  margin: 10px;
+  box-shadow: 9px 8px 21px 2px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 9px 8px 21px 2px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 9px 8px 21px 2px rgba(0, 0, 0, 0.27);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.carrusel {
+  width: 95%;
+  height: 750px;
+  object-fit: cover;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 750px;
+  border-radius: 10px;
+}
