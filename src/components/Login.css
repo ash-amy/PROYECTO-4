@@ -1,0 +1,16 @@
+body {
+    background-color: lightblue;
+}
+
+.container-box {
+    width: 300px;
+    background-color: lightpink;
+    border: 3px color(pink);
+    margin: 20px auto;
+    display: block;
+
+}
+
+.titulo {
+    color: green;
+}
