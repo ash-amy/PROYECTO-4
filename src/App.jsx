@@ -28,29 +28,6 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-        <div>
-          {/* 🔘 Botón que alterna el buscador */}
-          <button
-            onClick={() => setMostrarBuscador(!mostrarBuscador)}
-            style={{
-              padding: "10px 15px",
-              marginBottom: "15px",
-              borderRadius: "8px",
-              background: "#2563eb",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            {mostrarBuscador ? "Cerrar" : "Buscar"}
-          </button>
-
-          {/* 🪄 Mostrar el buscador sólo si mostrarBuscador es true */}
-          {mostrarBuscador && (
-            <Filter items={servicios} placeholder="Buscar servicio..." />
-          )}
-        </div>
-
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/Nosotros" element={<Nosotros />} />
@@ -58,19 +35,8 @@ function App() {
           <Route path="/Contacto" element={<Contacto />} />
           <Route path="/Testimonios" element={<Testimonios />} />
           <Route path="/Formulario" element={<h1>Formulario</h1>} />
-          <Route path="/Prueba" element={
-            <>
-            <Login />
-            </>
-          } />
-          <Route path="/Prueba1" element={
-            <>
-            <RegistrarUsuario />
-            </>
-          } />
-
-
-
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Registrar" element={<RegistrarUsuario />} />
         </Routes>
       </BrowserRouter>
       <Footer />

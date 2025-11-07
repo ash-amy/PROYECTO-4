@@ -1,12 +1,16 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import "./Navbar.css";
+import { Link } from 'react-router-dom'
+import { getAuth, signOut } from 'firebase/auth'
 
-function Navbar() {
+import './Navbar.css'
 
-  const [open, setOpen] = useState(false);
+function NavUsuario() {
+    const auth = getAuth();
+    //Función para cerrar sesión
+    const cerrarSesion = async() => {
+        await signOut(auth);
+    }
 
-  return (
+    return (
     <nav className="navbar degradado text-black p-0">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-xl font-bold">
@@ -68,14 +72,7 @@ function Navbar() {
 
         {/* Vincular con los Links correspondientes */}
         <div>
-          <button className="boton rounded-2 mx-1 hover:text-gray-300">
-          {" "}
-          <Link to="/Login">Log in</Link>
-          </button>
-
-          <button className="boton rounded-2 mx-1 hover:text-gray-300">
-            {" "}
-            <Link to="/Registrar">Sign up</Link>
+          <button onClick={cerrarsesion} className="boton rounded-2 mx-1 hover:text-gray-300">cerrar sesión
           </button>
         </div>
 
@@ -84,4 +81,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavUsuario;

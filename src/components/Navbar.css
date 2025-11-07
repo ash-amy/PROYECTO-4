@@ -3,7 +3,6 @@
   height: 80px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   position: sticky;
   top: 0;
   left: 0;
@@ -15,6 +14,7 @@
 .degradado {
   background: linear-gradient(135deg, #4db6e2 0%, #ffd93b 50%, #ff6f61 100%);
 }
+
 .logo {
   width: 150px;
   margin: 5px auto;
@@ -24,8 +24,7 @@
   font-size: 16px;
   color: black !important; /* asegúrate que sobrescriba bootstrap */
   border-radius: 200px;
-  margin: 10px;
-  padding: 5px;
+  padding: 10px;
   text-decoration: none;
 }
 
