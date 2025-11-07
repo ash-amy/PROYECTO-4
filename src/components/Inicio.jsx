@@ -120,6 +120,10 @@ function Inicio() {
           </button>
         </div>
       </section>
+
+      <section>
+        <h1>Matricúlate / Reserva tu matrícula</h1>
+      </section>
     </>
   );
 }

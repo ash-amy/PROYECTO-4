@@ -35,10 +35,19 @@ function Navbar() {
           </li>
         </ul>
 
+        {/* Vincular con los Links correspondientes */}
+        <div>
+          <button className="boton hover:text-gray-300">
+          {""}
+          <Link to="Formulario"></Link>Log in
+        </button>
+
         <button className="boton hover:text-gray-300">
           {""}
-          <Link to="Formulario"></Link>Matricúlate
+          <Link to="Formulario"></Link>Sign up
         </button>
+        </div>
+
       </div>
     </nav>
   );

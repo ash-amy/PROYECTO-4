@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import './Login.css'
 //Proveedor de Google
 const provider = new GoogleAuthProvider();
 
@@ -37,7 +36,7 @@ function Login({ onLogin, cambiarVista}) {
             const token = credential.accessToken;
             const user = result.user;
             console.log("Iniciaste sesion con Google");
-            onLogin(user);
+            //onLogin(user);
             
         }).catch((error) => {
             const errorCode = error.code;
@@ -50,24 +49,31 @@ function Login({ onLogin, cambiarVista}) {
     }
 
     return(
-        <div className="container-box">
-            <h1 className="titulo">Iniciar Sesion</h1>
-            <input 
-                type="email" 
-                placeholder="Escribe tu email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            <input 
-                type="password"
-                placeholder="Escribe tu contraseña"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <button onClick={iniciarSesion}>Iniciar Sesion</button>
-            <button onClick={iniciarSesionGoogle}>Iniciar Sesion con Google</button>
-            <p>No tienes una cuenta?</p>
-            <button onClick={cambiarVista}>Crear cuenta</button>
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-700 p-6">
+            <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8">
+                <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Iniciar Sesion</h1>
+                <label className="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                <input 
+                    type="email" 
+                    placeholder="Escribe tu email"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+
+                <label className="block text-sm font-medium text-gray-700 mb-1">Contraseña</label>
+                <input 
+                    type="password"
+                    placeholder="Escribe tu contraseña"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <button className="w-30 bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-all m-1" onClick={iniciarSesion}>Iniciar Sesion</button>
+                <button className="w-60 bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-all m-1" onClick={iniciarSesionGoogle}>Iniciar Sesion con Google</button>
+                <p className="mt-6 text-center text-sm text-gray-600">No tienes una cuenta?</p>
+                <button className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-all m-1" onClick={cambiarVista}>Crear cuenta</button>
+            </div>
         </div>
     )
 }
