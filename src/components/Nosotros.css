@@ -4,6 +4,10 @@
   margin: 10px;
 }
 
+.Presentación h1 {
+  font-family: "Fredoka", sans-serif;
+}
+
 .descripción {
   background-color: rgba(121, 239, 243, 0.445);
   border: 3px solid rgb(50, 133, 136);
@@ -11,6 +15,8 @@
   text-align: center;
   padding: 20px;
   margin: 10px;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 18px;
 }
 
 .descripción p {

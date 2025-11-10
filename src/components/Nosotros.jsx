@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./Nosotros.css";
-import datos from "../data/Integrantes.json";
 function Nosotros() {
   return (
     <>

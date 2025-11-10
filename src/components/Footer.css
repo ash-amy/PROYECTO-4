@@ -5,6 +5,7 @@ footer {
   justify-content: center;
   margin: auto;
   color: rgb(41, 37, 37);
+  font-family: "Fredoka", sans-serif;
 }
 
 .nombre {
@@ -36,7 +37,6 @@ footer {
   justify-content: center;
   text-align: center;
   margin: 3px;
-  font-family: var(--parrafos);
   font-size: 13px;
 }
 

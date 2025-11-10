@@ -60,7 +60,7 @@ function NavUsuario() {
               <input
                 type="text"
                 placeholder="Buscar..."
-                onBlur={() => setOpen(false)} // 🔙 se cierra al salir
+                onBlur={() => setOpen(true)} // 🔙 se cierra al salir
                 className={`absolute right-0 top-0 h-10 rounded-full border border-gray-300 pl-4 pr-10 text-gray-700 transition-all duration-300 ease-in-out ${
                   open
                     ? "w-56 opacity-100 pointer-events-auto"
@@ -72,7 +72,7 @@ function NavUsuario() {
 
         {/* Vincular con los Links correspondientes */}
         <div>
-          <button onClick={cerrarsesion} className="boton rounded-2 mx-1 hover:text-gray-300">cerrar sesión
+          <button onClick={cerrarSesion} className="boton rounded-2 mx-1 hover:text-gray-300">cerrar sesión
           </button>
         </div>
 

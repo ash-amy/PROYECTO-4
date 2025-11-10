@@ -12,17 +12,19 @@ body {
 }
 
 .banner h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Baloo 2", sans-serif;
   font-size: 50px;
   margin: 0;
 }
 
 .banner p {
+  font-family: "Comic Neue", cursive;
   font-size: 25px;
   margin: 20px;
 }
 
 .botones {
+  font-family: "Comic Neue", cursive;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -90,6 +92,7 @@ body {
 }
 
 .bienvenida p {
+  font-family: "Comic Neue", cursive;;
   font-size: 20px;
   text-align: left;
 }
