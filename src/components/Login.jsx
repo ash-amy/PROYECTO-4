@@ -74,7 +74,7 @@ function Login({ onLogin, cambiarVista}) {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button className="w-30 bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-all m-1" onClick={iniciarSesion}>Iniciar Sesion</button>
-                <button className="w-60 bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-all m-1" onClick={iniciarSesionGoogle}> <i class="bi bi-google"></i>Iniciar Sesion con Google</button>
+                <button className="w-60 bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-all m-1" onClick={iniciarSesionGoogle}> <i className="bi bi-google"></i>Iniciar Sesion con Google</button>
                 <p className="mt-6 text-center text-sm text-gray-600">No tienes una cuenta?</p>
                 <button className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-all m-1" onClick={cambiarVista}>Crear cuenta</button>
             </div>

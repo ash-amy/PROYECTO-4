@@ -4,17 +4,17 @@ function Footer() {
   return (
     <>
       <footer>
-        <div class="nombre">
+        <div className="nombre">
           <p>
             <b>"CODEPLAY"</b>
           </p>
         </div>
-        <div class="icons">
-          <i class="bi bi-instagram"></i>
-          <i class="bi bi-facebook"></i>
-          <i class="bi bi-whatsapp"></i>
+        <div className="icons">
+          <i className="bi bi-instagram"></i>
+          <i className="bi bi-facebook"></i>
+          <i className="bi bi-whatsapp"></i>
         </div>
-        <div class="author">
+        <div className="author">
           <p>
             “Plataforma educativa para niños de 6 a 10 años, donde aprender
             programación y creatividad es un juego.”

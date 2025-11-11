@@ -56,7 +56,7 @@ function Inicio() {
 
         <section className="container">
           <img
-            class="niños-programación"
+            className="niños-programación"
             src="https://i.pinimg.com/1200x/39/79/ca/3979cafea548c6745f9eb1bf9808305e.jpg"
             alt="Niños aprendiendo programación con tablets"
           />
@@ -83,7 +83,7 @@ function Inicio() {
             <div className="carousel-item">
               <img
                 src="../public/Img 3.png"
-                class="d-block w-100"
+                className="d-block w-100"
                 alt="Niños aprendiendo código de progración con una laptop."
               />
             </div>
@@ -108,7 +108,7 @@ function Inicio() {
             <span className="visually-hidden">Previous</span>
           </button>
           <button
-            class="carousel-control-next"
+            className="carousel-control-next"
             type="button"
             data-bs-target="#carouselExample"
             data-bs-slide="next"

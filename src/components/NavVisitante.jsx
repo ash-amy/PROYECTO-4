@@ -36,6 +36,10 @@ function NavVisitante() {
             {" "}
             <Link to="/Testimonios">Testimonios</Link>
           </li>
+          <li className="hover:text-gray-300">
+            {" "}
+            <Link to="/Promociones">Promociones</Link>
+          </li>
         </ul>
         </div>
 

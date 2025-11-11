@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom'
 import { getAuth, signOut } from 'firebase/auth'
+import { useNavigate } from 'react-router-dom';
 
 import './Navbar.css'
 
 function NavUsuario() {
     const auth = getAuth();
+    const navigate = useNavigate();
     //Función para cerrar sesión
     const cerrarSesion = async() => {
         await signOut(auth);
+        navigate("/");
     }
 
     return (
@@ -42,6 +45,10 @@ function NavUsuario() {
           <li className="hover:text-gray-300">
             {" "}
             <Link to="/Testimonios">Testimonios</Link>
+          </li>
+          <li className="hover:text-gray-300">
+            {" "}
+            <Link to="/Promociones">Promociones</Link>
           </li>
         </ul>
         </div>
