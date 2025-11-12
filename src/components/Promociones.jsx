@@ -1,32 +1,83 @@
 import {useState, useEffect} from "react";
-import {getAuth} from "firebase/auth"; 
-import {db} from "../firebase";
+import {getAuth, onAuthStateChanged, updateProfile} from "firebase/auth"; 
 
 function Promociones() {
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
+    const [foto, setFoto] = useState("");
     const [cargando, setCargando] = useState(true);
 
+    const [nuevoNombre, setNuevoNombre] = useState("");
+    const [nuevaFoto, setNuevaFoto] = useState("");
+
+    const auth = getAuth();
+
     useEffect(()=>{
-        const auth = getAuth();
+        
         const user = auth.currentUser;
-        if (user) {
-            setEmail(user.email);
-           
-            if (user.displayName) {
-                setNombre(user.displayName);
-                setCargando(false);
-            }
-        }
-    }, []);
-    
+        // Escrucha si el usuario inicia o cierra sesión
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+           if (user) {
+                setEmail(user.email);
+                setNombre(user.displayName || "Usuario sin nombre");
+                setFoto(user.photoURL || "user.webp")
+
+                setNuevoNombre(user.displayName || "");
+                setNuevaFoto(user.photoURL || "")
+           } else {
+                setEmail("");
+                setNombre("");
+                setFoto("");
+           }
+           setCargando(false);
+        });
+        // Limpia la suscripción cuando el componente se desmonta
+        return () => unsubscribe();
+    },[]);
+
+    //Función para editar mis datos 
+    const actualizarPerfil = async() => {
+        const user = auth.currentUser;
+        if (!user) return alert("No hay un usuario activo");
+        await updateProfile(user,{
+            displayName: nuevoNombre || user.displayName,
+            photoURL: nuevaFoto || user.photoURL
+        })
+        alert("Pefil actualizado");
+        setNombre(nuevoNombre);
+        setFoto(nuevaFoto);
+    }
+
+    if (cargando) {
+        return <p className="text-center mt-10 tect-gray-500">Cargando datos...</p>;   
+    }
+
     return (
-        <>
-        <h1>Promociones y Descuentos</h1>
-        <p>Bienvenido {nombre}</p>
-        <p>Correo ingresado: {email}</p>
-        </>
+        <div className="p-8 text-center">
+            <img src={foto} alt="" />
+            <h1 className="text-exl font-bold mb-4">Bienvenido a la comunidad</h1>
+            <p className="text.lg">Hola, <strong>{nombre}</strong></p>
+            <p className="text-gray-600">Tu correo: {email}</p>
+
+            <h2>Formulario para editar mis datos</h2>
+            <input 
+                type="text" 
+                placeholder="actualizar mi nombre"
+                value={nuevoNombre}
+                onChange={(e) => setNuevoNombre(e.target.value)} 
+            />
+            <input 
+                type="text" 
+                placeholder="actualizar mi foto"
+                value={nuevaFoto}
+                onChange={(e) => setNuevaFoto(e.target.value)} 
+            />
+            <button onClick={actualizarPerfil}>Actualizar perfil</button>
+
+            <hr className="my-6" />
+            <p className="text-gray-700">Aquí podrás interactuar con otros usuarios y compartir tus ideas.</p>
+        </div>
     )
 }
 
-export default Promociones; 
+export default Promociones;
