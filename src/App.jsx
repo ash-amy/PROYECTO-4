@@ -15,7 +15,6 @@ import Contacto from "./components/Contacto";
 import Testimonios from "./components/Testimonios";
 import Footer from "./components/Footer";
 import Filter from "./components/Filter";
-import Promociones from "./components/Promociones";
 import RutaPrivada from "./components/RutaPrivada";
 
 //Iniciar sesión y registrarse
@@ -35,14 +34,9 @@ function App() {
           <Route path="/Nosotros" element={<Nosotros />} />
           <Route path="/Juegos" element={<Juegos />} />
           <Route path="/Contacto" element={<Contacto />} />
-          <Route path="/Testimonios" element={<Testimonios />} />
-          <Route path="/Promociones" element={
-            <>
-            <RutaPrivada>
-              <Promociones />
-            </RutaPrivada>
-            </>
-          } />
+          <Route path="/Testimonios" element={<><RutaPrivada>
+                                                <Testimonios />
+                                                </RutaPrivada></>} />
           <Route path="/Formulario" element={<h1>Formulario</h1>} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registrar" element={<RegistrarUsuario />} />
