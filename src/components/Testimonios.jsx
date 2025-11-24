@@ -1,17 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { getAuth, onAuthStateChanged, updateProfile } from 'firebase/auth'
 import { db } from '../firebase'
-import {
-    collection,
-    addDoc,
-    onSnapshot,
-    query,
-    orderBy,
-    updateDoc,
-    deleteDoc,
-    doc,
-    serverTimestamp,
-} from 'firebase/firestore'
+import {collection, addDoc, onSnapshot, query, orderBy, updateDoc, deleteDoc, doc, serverTimestamp,} from 'firebase/firestore'
 
 function Testimonios() {
     // usuario
@@ -182,7 +172,7 @@ function Testimonios() {
         setInputComentarioPorPost((prev) => ({ ...prev, [postId]: '' }))
     }
 
-    // ⭐⭐⭐ EDITAR COMENTARIO ⭐⭐⭐
+    // EDITAR COMENTARIO 
     const editarComentario = async (postId, comentario) => {
         const nuevoTexto = prompt('Editar comentario:', comentario.texto)
         if (!nuevoTexto || nuevoTexto.trim() === '') return
@@ -195,7 +185,7 @@ function Testimonios() {
         )
     }
 
-    // ⭐⭐⭐ ELIMINAR COMENTARIO ⭐⭐⭐
+    // ELIMINAR COMENTARIO
     const eliminarComentario = async (postId, comentario) => {
         if (!confirm('¿Eliminar comentario?')) return
 
@@ -298,7 +288,7 @@ function Testimonios() {
                                     </>
                                 )}
                             </div>
-                            {/* -------------------- COMENTARIOS ---------------------- */}
+                            {/* COMENTARIOS */}
                             <div className="mt-4">
                                 <h4 className="font-semibold mb-2">
                                     Comentarios ({comentarios.length})
@@ -373,7 +363,7 @@ function Testimonios() {
                                 />
 
                                 <button
-                                    className="bg-green-600 text-white px-3 py-1 rounded mt-2"
+                                    className="bg-yellow-400 text-white px-3 py-1 rounded mt-2"
                                     onClick={() => agregarComentario(post.id)}
                                 >
                                     Comentar
@@ -387,7 +377,7 @@ function Testimonios() {
             <hr className="my-6" />
 
             {/* editar perfil */}
-            <h2 className="text-xl font-bold mb-2">Confirma tus datos</h2>
+            <h2 className="text-xl font-bold mb-2 text-center">Confirma tus datos</h2>
             <input
                 type="text"
                 placeholder="Nuevo nombre"
@@ -403,7 +393,7 @@ function Testimonios() {
                 className="border p-2 rounded w-full mb-3"
             />
             <button
-                className="bg-blue-600 text-white px-4 py-2 rounded w-full mb-6"
+                className="bg-red-400 text-white px-4 py-2 rounded w-full mb-6"
                 onClick={actualizarPerfil}>
                 Guardar cambios
             </button>
@@ -411,7 +401,7 @@ function Testimonios() {
             <hr className="my-6" />
 
             {/* crear post */}
-            <h2 className="text-xl font-bold mb-2">Compartir Experiencia</h2>
+            <h2 className="text-xl font-bold mb-2 text-center">Compartir Experiencia</h2>
             <textarea
                 placeholder="¿Qué te parece nuestra página?"
                 value={contenidoPost}
@@ -419,7 +409,7 @@ function Testimonios() {
                 className="w-full border p-3 rounded mb-3"
             />
             <button
-                className="bg-green-600 text-white px-4 py-2 rounded w-full mb-6"
+                className="bg-blue-400 text-white px-4 py-2 rounded w-full mb-6"
                 onClick={crearPost}>
                 Publicar
             </button>

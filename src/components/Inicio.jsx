@@ -5,7 +5,7 @@ function Inicio() {
   return (
     <>
       <main className="first-view row m-auto px-3 py-4">
-        <div className="banner">
+        <div className="banner bg-yellow-300 rounded-2xl">
           <h1>✨🚀“Aquí no solo presionas botones…🚀✨</h1>
           <h1>
             ¡creas mundos, inventas historias y programas tus propias
