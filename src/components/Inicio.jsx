@@ -68,21 +68,21 @@ function Inicio() {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src="../public/Img 1.png"
+                src="/Img 1.png"
                 alt="Niño viendo patrones básicos de programación en una laptop."
               />
             </div>
 
             <div className="carousel-item">
               <img
-                src="../public/Img 2.avif"
+                src="/Img 2.avif"
                 alt="Niños utilizando material didáctico y una tablet para aprender programación."
               />
             </div>
 
             <div className="carousel-item">
               <img
-                src="../public/Img 3.png"
+                src="/Img 3.png"
                 className="d-block w-100"
                 alt="Niños aprendiendo código de progración con una laptop."
               />
@@ -90,7 +90,7 @@ function Inicio() {
 
             <div className="carousel-item">
               <img
-                src="../public/Img 4.jpg"
+                src="/Img 4.jpg"
                 alt="Manos infantiles manipulando una tablet con contenido didáctico y llamativo de programación básica"
               />
             </div>
