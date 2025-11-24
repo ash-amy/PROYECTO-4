@@ -57,7 +57,7 @@ function Nosotros() {
       </div>
 
       <section className="Misión-Visión-Valores">
-        <img src="/Logo.png" alt="Logo de ColdPlay" />
+        <img src="/logo.png" alt="Logo de ColdPlay" />
 
         <div>
           <div className="contenedor" id="Misión">
