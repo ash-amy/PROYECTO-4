@@ -54,13 +54,13 @@ function Inicio() {
           </p>
         </div>
 
-        <section className="container">
+        
           <img
             className="niños-programación"
             src="https://i.pinimg.com/1200x/39/79/ca/3979cafea548c6745f9eb1bf9808305e.jpg"
             alt="Niños aprendiendo programación con tablets"
           />
-        </section>
+        
       </section>
 
       <section className="carrusel">
