@@ -12,7 +12,7 @@ function NavVisitante() {
         <div className="text-xl font-bold">
           <img
             className="logo"
-            src="./Public/Logo sin fondo.png"
+            src="./Logo sin fondo.png"
             alt="Logo CodePlay"
           />
         </div>
