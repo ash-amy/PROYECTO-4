@@ -26,7 +26,7 @@ function Nosotros() {
       <div className="Contenedor">
         <div className="Tarjetas" id="tarjeta1">
           <h4>Ashley Perales</h4>
-          <img src="../public/Avatar.png" alt="Foto de integrante" />
+          <img src="/Avatar.png" alt="Foto de integrante" />
           <p>
             Apasionada por la tecnología y la innovación educativa. Le encanta
             trabajar en equipo y liderar proyectos que inspiren a otros.
@@ -35,7 +35,7 @@ function Nosotros() {
 
         <div className="Tarjetas" id="tarjeta2">
           <h4>Hannah ______</h4>
-          <img src="../public/Avatar.png" alt="Foto de integrante" />
+          <img src="/Avatar.png" alt="Foto de integrante" />
           <p>
             Le apasiona crear interfaces atractivas y funcionales que conecten
             con las personas y hagan que aprender sea divertido.
@@ -44,7 +44,7 @@ function Nosotros() {
 
         <div className="Tarjetas" id="tarjeta3">
           <h4>Melany ______</h4>
-          <img src="../public/Avatar.png" alt="Foto de integrante" />
+          <img src="/Avatar.png" alt="Foto de integrante" />
           <p>
             Disfruta resolviendo problemas y creando soluciones tecnológicas que
             faciliten el aprendizaje y la comunicación.
